@@ -1,3 +1,7 @@
-<p>
-  search works!
-</p>
+<div class="form-group">
+    <input #txtBuscar (keyup)="buscarArtista(txtBuscar.value)" class="form-control" type="text" placeholder="Buscar Artista...">
+</div>
+
+<app-loading class="m-5" *ngIf="loading"></app-loading>
+
+<app-cards *ngIf="!loading" [items]="artistas"></app-cards>

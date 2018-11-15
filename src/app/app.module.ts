@@ -1,18 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+// Modules
 import { HttpClientModule } from '@angular/common/http';
-
 import { RouterModule } from '@angular/router';
 
-// Rutas
+// Routes
 import { ROUTES } from './app.routes';
 
+// Components
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
 import { ArtistComponent } from './components/artist/artist.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
+import { CardsComponent } from './components/shared/cards/cards.component';
+
+// Pipes
+import { NoimagePipe } from './pipes/noimage.pipe';
+import { LoadingComponent } from './components/shared/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +26,10 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
     HomeComponent,
     SearchComponent,
     ArtistComponent,
-    NavbarComponent
+    NavbarComponent,
+    NoimagePipe,
+    CardsComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
